@@ -3,6 +3,7 @@ mod closure;
 mod helloworld;
 mod generic;
 mod guess_number;
+mod process_control;
 
 fn test_mod() {
     helloworld::sayhi();
@@ -20,9 +21,9 @@ fn test_generic_in_method() {
     // p4.mixup(p3);
     p4.print_ur_point_x(p5);
     p4.print_ur_point_x(p6);
-    println!("p3.x = {}, p3.y = {}", p3.x, p3.y)
+    println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
 }
 
 fn main() {
-    guess_number::guess();
+    process_control::exec_all_fn();
 }

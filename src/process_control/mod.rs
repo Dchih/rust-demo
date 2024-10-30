@@ -2,6 +2,9 @@ pub mod if_else;
 mod loop_1;
 mod while_1;
 mod for_loop;
+mod match_case;
+mod if_let;
+mod while_let;
 
 
 pub fn exec_all_fn() {
@@ -32,4 +35,25 @@ pub fn exec_all_fn() {
     println!("name: {name}");
   }
   println!("n: {n}, {s}, {ns}");
+
+  let number = 0;
+  match_case::easy_match(&number);
+
+  let color = match_case::Color::Red;
+  match_case::enum_destruction(&color);
+
+  match_case::pointer_ref_destruction();
+
+  match_case::struct_destruction();
+
+  match_case::guard_sen();
+
+  let bind_num = 5;
+  match_case::bind_in_match(&bind_num);
+  match_case::bind_de_enum(&None);
+
+  if_let::if_let();
+  
+  while_let::disgraceful_destruction();
+  while_let::while_let();
 }

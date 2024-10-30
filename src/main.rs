@@ -4,6 +4,7 @@ mod helloworld;
 mod generic;
 mod guess_number;
 mod process_control;
+mod life_circle;
 
 fn test_mod() {
     helloworld::sayhi();
@@ -25,5 +26,5 @@ fn test_generic_in_method() {
 }
 
 fn main() {
-    process_control::exec_all_fn();
+    life_circle::exec_all_fn();
 }

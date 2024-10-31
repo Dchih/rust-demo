@@ -1,5 +1,5 @@
 pub fn if_let() {
-  let s = Some(2);
+  let _s = Some(2);
   let b: Option<i32> = None;
 
   if let Some(i) = b {

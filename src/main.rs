@@ -26,5 +26,5 @@ fn test_generic_in_method() {
 }
 
 fn main() {
-    life_circle::exec_all_fn();
+    generic::exec_all();
 }

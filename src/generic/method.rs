@@ -18,3 +18,18 @@ impl<T: Display, U: Display> Point<T, U> {
     println!("x: {}, y: {}", self.x, self.y);
   }
 }
+
+// concrete type
+struct A;
+// concrete type 
+struct S(A);
+// generic
+struct SGen<T>(T);
+
+fn reg_fn(_s: S) {}
+
+fn gen_spec_fn(_s: SGen<A>) {}
+
+fn gen_spec_i32(_s: SGen<i32>) {}
+
+fn generic<T>(_s: SGen<T>) {}

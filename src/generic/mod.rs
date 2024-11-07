@@ -4,6 +4,8 @@ use std::marker::Copy;
 
 pub mod method;
 mod implementation;
+mod _trait;
+mod constraint;
 
 // 对泛型进行约束，使其能进行函数中的运算
 fn add<T: Add<Output = T>>(a: T, b: T) -> T {
@@ -36,5 +38,8 @@ pub fn exec_all() {
     let x = implementation::Val { val: 32f64 };
     let y = implementation::GenVal { gen_val: 32i32 };
 
-    println!("Val.val is: {}, Gen_Val.gen_val is: {}", x.value(), y.generate_value(23f64))
+    println!("Val.val is: {}, Gen_Val.gen_val is: {}", x.value(), y.generate_value(23f64));
+
+    println!("execute _trait: ");
+    _trait::exec_all();
 }

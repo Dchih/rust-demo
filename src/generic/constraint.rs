@@ -1,4 +1,5 @@
 use std::fmt::Display;
+use std::fmt::Debug;
 
 fn printer<T: Display>(t: T) {
   println!("{}", t);

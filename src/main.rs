@@ -5,6 +5,7 @@ mod generic;
 mod guess_number;
 mod process_control;
 mod life_circle;
+mod ownership;
 
 fn test_mod() {
     helloworld::sayhi();
@@ -26,5 +27,7 @@ fn test_generic_in_method() {
 }
 
 fn main() {
-    generic::exec_all();
+    let s = String::from("hello, world");
+    let r = ownership::test_ownershio(s);
+    println!("{r}");
 }
